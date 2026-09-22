@@ -1,0 +1,270 @@
+/* VARIABLES CSS - ROOT */
+:root {
+  --color-bg-dark: #0f111a;
+  --color-card-bg: #1a1d28;
+  --color-border: #2a2e3f;
+  --color-neon-cyan: #00f0ff;
+  --color-neon-pink: #ff0055;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-main: 'Roboto', sans-serif;
+}
+
+/* BASE */
+body.pagina {
+  background-color: var(--color-bg-dark);
+  color: #e0e0e0;
+  font-family: var(--font-main);
+}
+
+.principal {
+  background-color: #141622;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* HEADER & NAV */
+.logo {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.logo span {
+  color: var(--color-neon-cyan);
+}
+
+.formulario-busqueda {
+  max-width: 430px;
+  margin: 0 auto;
+}
+
+.formulario-busqueda__entrada {
+  background-color: var(--color-card-bg);
+  color: #fff;
+  border: 1px solid var(--color-border);
+}
+
+.formulario-busqueda__entrada::placeholder {
+  color: #8d92a3;
+}
+
+.formulario-busqueda__entrada:focus {
+  background-color: var(--color-card-bg);
+  color: #fff;
+  border-color: var(--color-neon-cyan);
+  box-shadow: 0 0 0 0.2rem rgba(0, 240, 255, 0.15);
+}
+
+.formulario-busqueda__boton {
+  color: #081014;
+  background-color: var(--color-neon-cyan);
+  border-color: var(--color-neon-cyan);
+}
+
+.formulario-busqueda__boton:hover {
+  color: #081014;
+  background-color: #7af8ff;
+  border-color: #7af8ff;
+}
+
+/* BOTONES */
+.boton-gamer {
+  background-color: var(--color-neon-pink);
+  color: #fff;
+  border: none;
+  font-weight: bold;
+}
+
+.boton-gamer:hover {
+  background-color: #d60047;
+  color: #fff;
+}
+
+/* BANNER & CARRUSEL */
+.banner__imagen {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  background: radial-gradient(circle at top, rgba(255,255,255,0.12), rgba(15,17,26,0.96) 52%);
+  filter: brightness(0.9) saturate(1.05);
+  padding: 0;
+}
+
+.carousel-item:nth-child(2) .banner__imagen {
+  transform: scale(1.14);
+  transform-origin: top center;
+}
+
+.carousel-caption {
+  background: rgba(15, 17, 26, 0.8);
+  backdrop-filter: blur(4px);
+  border-radius: 8px;
+  padding: 15px;
+  border-left: 4px solid var(--color-neon-cyan);
+}
+
+.carousel-caption h2 {
+  font-family: var(--font-heading);
+  color: #fff;
+}
+
+/* CARDS DE JUEGOS */
+.tarjeta {
+  position: relative;
+  background-color: var(--color-card-bg);
+  border: 1px solid rgba(0, 240, 255, 0.18);
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  overflow: hidden;
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-neon-cyan);
+  box-shadow: 0 10px 24px rgba(0, 240, 255, 0.2);
+}
+
+.tarjeta__imagen {
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  object-position: center;
+  border-bottom: 2px solid rgba(0, 240, 255, 0.55);
+  background: linear-gradient(135deg, rgba(0,240,255,0.07), rgba(255,0,85,0.04));
+  padding: 8px;
+  filter: saturate(1.08) contrast(1.03);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tarjeta:hover .tarjeta__imagen {
+  transform: scale(1.04);
+  filter: saturate(1.2) contrast(1.05);
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+.tarjeta__texto {
+  margin-bottom: 0;
+  color: #aeb4c4 !important;
+}
+
+/* CONTENEDORES SECUNDARIOS */
+.borde-gamer {
+  background-color: var(--color-card-bg);
+  border: 1px solid var(--color-border);
+}
+
+.titulo-seccion, .titulo-acento {
+  font-family: var(--font-heading);
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.texto-neon {
+  color: var(--color-neon-cyan);
+}
+
+.categoria-cabecera {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.categoria-boton {
+  display: none;
+  width: 38px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--color-neon-cyan);
+  border-radius: 6px;
+  color: var(--color-neon-cyan);
+  background: rgba(0, 240, 255, 0.08);
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.categoria-boton:hover,
+.categoria-boton:focus-visible {
+  color: #081014;
+  background: var(--color-neon-cyan);
+  outline: none;
+}
+
+.busqueda-vacia {
+  font-size: 0.9rem;
+}
+
+/* FOOTER - DERECHOS RESERVADOS EN BLANCO */
+.pie__caja p {
+  color: #ffffff !important;
+}
+
+.pie__caja {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.pie__validacion-css {
+  width: 72px;
+  height: auto;
+}
+
+/* AJUSTES RESPONSIVE EN MÓVILES */
+@media (max-width: 768px) {
+  body.pagina {
+    background-color: #102b35;
+  }
+
+  .principal {
+    background-color: #15232d;
+  }
+
+  .banner__imagen {
+    height: 220px;
+  }
+
+  .carousel-item:nth-child(2) .banner__imagen {
+    transform: scale(1.08);
+    transform-origin: top center;
+  }
+
+  .categoria-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .categoria-lista {
+    display: none;
+    margin-top: 1rem !important;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .categoria-lista--abierta {
+    display: block;
+    animation: category-reveal 0.2s ease-out;
+  }
+}
+
+@keyframes category-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
