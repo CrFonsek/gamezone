@@ -234,6 +234,23 @@ body.pagina {
     height: 220px;
   }
 
+  .carousel-caption {
+    right: 8%;
+    bottom: 1rem;
+    left: 8%;
+    padding: 8px;
+  }
+
+  .carousel-caption h1 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .carousel-caption p {
+    margin-bottom: 0;
+    font-size: 0.75rem;
+  }
+
   .carousel-item:nth-child(2) .banner__imagen {
     transform: scale(1.08);
     transform-origin: top center;
